@@ -93,6 +93,12 @@ SELECT *
 FROM customers
 WHERE country IN ('Germany' , 'USA')
 
+-- Retrieve all customers who are not from Germany nor USA
+
+SELECT *
+FROM customers
+WHERE country NOT IN ('Germany' , 'USA')
+
 -- Search Operator 
 
 -- LIKE

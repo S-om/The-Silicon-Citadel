@@ -105,3 +105,4 @@ SELECT * FROM customers
 
 TRUNCATE TABLE persons -- Here we use TRUNCATE cause in case of large tables
 -- DELETE is slow so we use TRUNCATE
+
