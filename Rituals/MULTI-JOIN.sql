@@ -15,8 +15,7 @@ SELECT
     sp.Price,
     CONCAT_WS(' ',se.FirstName,se.LastName) AS SalesPersonName,
     se.Gender
-   
-
+    
 
 FROM Sales.Orders AS so 
 LEFT JOIN Sales.Customers as sc
