@@ -22,14 +22,29 @@ FROM Sales.Orders
 
 
 -- DATEPART
+USE SalesDB
+
+
 
 SELECT 
     CreationTime,
-    DATEPART(YEAR , CreationTime) Year_dp,
-    DATEPART(MONTH , CreationTime) Month_dp,
-    DATEPART(DAY , CreationTime) Day_dp,
+    -- DATEPART examples
     DATEPART(HOUR , CreationTime) Hour_dp,
-    DATEPART(QUARTER , CreationTime) Quarter_dp
-
-
+    DATEPART(QUARTER , CreationTime) Quarter_dp,
+    -- DATENAME examples
+    DATENAME(MONTH, CreationTime) Month_name,
+    DATENAME(WEEKDAY, CreationTime) Weekday_name,
+    -- DATETRUNC() examples
+    DATETRUNC(MINUTE , CreationTime)
 FROM Sales.Orders
+
+
+SELECT 
+    DATETRUNC(MONTH , CreationTime) Creation,
+    Count(*) No_of_orders
+FROM Sales.Orders
+GROUP BY DATETRUNC(MONTH , CreationTime)
+
+
+
+
